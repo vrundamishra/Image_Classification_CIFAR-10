@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Image for Classification</h2>
+        <div class="file-input">
+          <input type="file" id="file" (change)="onFileSelected($event)" hidden>
+          <label for="file" class="file-label">Choose a file</label>
+        </div>
+        <button class="upload-button" (click)="onUpload()">Upload</button>
+        <div *ngIf="label" class="result">
+          <p>Image Label: <span>{{ label }}</span></p>
+        </div>
+      </div>
+      
+</body>
+</html>
